@@ -108,16 +108,16 @@ printResultAnswer(name, treeResult, treeAnswer)
 d = tg.myTree()
 name = "d"
 self = d
-self.addInfo('A', ['D', 'F'])
-self.addInfo('B', ['A', 'C'])
+self.addInfo('B', ['D', 'F'])
+self.addInfo('A', ['B', 'C'])
 self.addInfo('C', ['G', 'I'])
 self.addInfo('D', ['.', '.'])
 self.addInfo('F', ['H', '.'])
 self.addInfo('G', ['.', '.'])
 self.addInfo('H', ['.', '.'])
 self.addInfo('I', ['.', '.'])
-treeResult = self.postorder('B')
-treeAnswer = ['D', 'H', 'F', 'A', 'G', 'I', 'C', 'B']
+treeResult = self.postorder('A')
+treeAnswer = ['D', 'H', 'F', 'B', 'G', 'I', 'C', 'A']
 printResultAnswer(name, treeResult, treeAnswer)
 
 printResult(answerCases, wrongCases)
