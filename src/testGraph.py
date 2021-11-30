@@ -43,13 +43,9 @@ def makeMatrix(myVertex, myInfo):
     for i in range(lenVertex):
         myMatrix[i][i] = tg.INF
     for i in range(lenVertex-1):
-        k = 0
-        for j in range(lenVertex-1):
-            if(k == len(myInfo[i])):
-                break
+        for j in range(len(myInfo[i])):
             myMatrix[i][-(j+1)] = myInfo[i][-(j+1)]
             myMatrix[-(j+1)][i] = myInfo[i][-(j+1)]
-            k += 1
     return myMatrix
 
 
