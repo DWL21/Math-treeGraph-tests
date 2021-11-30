@@ -1,4 +1,3 @@
-#-*- coding:utf-8 -*-
 import treeGraph as tg
 
 dicMatrix = {}
@@ -13,10 +12,10 @@ def printResultAnswer(name, result, answer):
     dicResult[name] = result
     dicAnswer[name] = answer
     if (result == answer):
-        print(f"{name}: 정답")
+        print(f"{name}: Success")
         answerCases.append(name)
     else:
-        print(f"{name}: 오답")
+        print(f"{name}: Failure")
         wrongCases.append(name)
 
 def printResult(answerCases, wrongCases):
@@ -28,15 +27,15 @@ def printResult(answerCases, wrongCases):
     lennoAnswer = len(wrongCases)
     lenAll = len(allCases)
     print("-"*100)
-    print(f"전체: {allCases}")
-    print(f"통과: {answerCases}")
-    print(f"실패: {wrongCases}")
+    print(f"All: {allCases}")
+    print(f"Success: {answerCases}")
+    print(f"Failure: {wrongCases}")
     print()
-    print(f"(성공/전체): ({lenAnswer}/{lenAll})")
+    print(f"(Success/All): ({lenAnswer}/{lenAll})")
     if(lenAll == lenAnswer):
-        print("모든 테스트를 통과 하였습니다.")
+        print("Passed all tests.")
     else:
-        print(f"{lenAnswer}개의 테스트를 통과 하였습니다.")
+        print(f"Passed {lenAnswer} tests.")
 
 def makeMatrix(myVertex, myInfo):
     lenVertex = len(myVertex)
@@ -193,7 +192,7 @@ printResult(answerCases, wrongCases)
 
 while(1):
     print("-"*100)
-    name = input("찾으려는 테스트의 이름을 입력해 주세요(종료하려면 0 입력): ")
+    name = input("Please enter the name (Exit: 0): ")
     if name == '0':
         print("Exit")
         break
@@ -201,6 +200,6 @@ while(1):
     for i in range(len(dicMatrix[name])):
         print(dicMatrix[name][i])
     print("-"*100)
-    print(f"vertex: {len(dicMatrix[name])}")
-    print(f"실행 결과: {dicResult[name]}")
-    print(f"정답 : {dicAnswer[name]}")
+    print(f"Vertex: {len(dicMatrix[name])}")
+    print(f"Result: {dicResult[name]}")
+    print(f"Answer : {dicAnswer[name]}")

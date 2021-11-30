@@ -1,4 +1,3 @@
-#-*- coding:utf-8 -*-
 import treeGraph as tg
 
 answerCases = []
@@ -8,11 +7,11 @@ def printResultAnswer(name, treeResult, treeAnswer):
     print("-"*100)
     print(f"{name} result: {treeResult}")
     if (treeResult == treeAnswer):
-        print(f"{name}: 정답")
+        print(f"{name}: Success")
         answerCases.append(name)
     else:
         print(f"{name} answer: {treeAnswer}")
-        print(f"{name}: 오답")
+        print(f"{name}: Failure")
         wrongCases.append(name)
 
 
@@ -26,15 +25,15 @@ def printResult(answerCases, wrongCases):
     lennoAnswer = len(wrongCases)
     lenAll = len(allCases)
     print("-"*100)
-    print(f"전체: {allCases}")
-    print(f"통과: {answerCases}")
-    print(f"실패: {wrongCases}")
+    print(f"All: {allCases}")
+    print(f"Success: {answerCases}")
+    print(f"Failure: {wrongCases}")
     print()
-    print(f"(성공/전체): ({lenAnswer}/{lenAll})")
+    print(f"(Success/All): ({lenAnswer}/{lenAll})")
     if(lenAll == lenAnswer):
-        print("모든 테스트를 통과 하였습니다.")
+        print("Passed all tests.")
     else:
-        print(f"{lenAnswer}개의 테스트를 통과 하였습니다.")
+        print(f"Passed {lenAnswer} tests.")
 
 
 print("testTree.py")
