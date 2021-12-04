@@ -3,3 +3,8 @@ src/treeGraph.py
 src/__pycache__/treeGraph.cpython-310.pyc
 src/treeGraph_kruskal.py
 src/treeGraph_prim.py
+src/__pycache__/treeGraph.cpython-39.pyc
+src/__pycache__/treeGraph_s.cpython-39.pyc
+src/treeGraph_s.py
+src/treeGraph_submit.py
+src/test.py

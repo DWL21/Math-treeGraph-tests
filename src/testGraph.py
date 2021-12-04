@@ -136,7 +136,7 @@ myInfo = [[2, 5, 4, 6, 7], [4, 5, 6, 10], [20, 3, 4], [2, 30], [tg.INF]]
 myVertex = [i+1 for i in range(lenVertex)]
 myMatrix = makeMatrix(myVertex, myInfo)
 print(myMatrix)
-graphAnswer = 17
+graphAnswer = 15
 g = tg.myGraph(myVertex, myMatrix)
 name = "g"
 self = g
@@ -175,7 +175,7 @@ myInfo = [[2, 1, 5, 2, tg.INF, 3], [3, 5, tg.INF, 1, 8], [4, 3, 2, 6], [3, 2, 8]
 myVertex = [i+1 for i in range(lenVertex)]
 myMatrix = makeMatrix(myVertex, myInfo)
 print(myMatrix)
-graphAnswer = 11
+graphAnswer = 10
 j = tg.myGraph(myVertex, myMatrix)
 name = "j"
 self = j
